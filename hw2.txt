@@ -1,0 +1,37 @@
+Eric Yang
+304263623
+homework 2
+
+2.24
+	A jump to 0x4000 0000 is not possible because the jump instruction 
+	can't move to an address bigger than 26 bits in one instruction
+
+	The branch-on-equal struction would not work since it can only use
+	16 bits for the address
+
+2.26.1
+	LOOP: slt $t2, $0, $t1		// 0<10 initially
+		beq $t2, $0, DONE	// quit when $t1 is 0
+		subi $t1, $t1, 1	// subtract 1 from $t1 each loop
+		addi $s2, $s2, 2	// $s2 = $s2 + 2
+		j LOOP
+	DONE:
+
+	Loops 10 times so $s2 should be 20
+
+2.26.3
+	Each loop has 5 instructions with 2 instructions for last loop before DONE
+	5N + 2 instructions total
+
+2.46.1
+	CPI*intructions for arithmetic = 500m*1 = 500m
+	CPI*intructions for load/store = 300m*10 = 3000m
+	CPI*intructions for branch = 100m*3 = 300m
+
+	Execution time = 3800m * cycle time
+
+	New number of arithmetic instructions = 375m
+	
+	New execution time = 3675m * 1.1 * cycle time = 4042.5 * cycle time
+
+	Bad idea since it increases the execution time

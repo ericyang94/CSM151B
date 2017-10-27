@@ -1,0 +1,80 @@
+Eric Yang
+304263623
+CS M151B
+Homework 1
+
+
+1.5
+	a. 
+		P1 instructions/sec = 3*10^9 / 1.5 = 2*10^9 instructions/sec
+		P2 instructions/sec = 2.5*10^9 / 1.0 = 2.5*10^9 instructions/sec
+		P3 instructions/sec = 4*10^9 / 2.2 = 1.82*10^9 instructions/sec
+		
+		P2 has the best performance in instructions/sec
+
+	b.
+		P1 cycles = 3*10^10 cycles 
+		P2 cycles = 2.5*10^10 cycles 
+		P3 cycles = 4*10^10 cycles 
+
+		P1 instructions = 3*10^10 / 1.5 = 2*10^10 instructions 
+		P2 instructions = 2.5*10^10 / 1.0 = 2.5*10^10 instructions 
+		P3 instructions = 4*10^10 / 2.2 = 1.82*10^10 instructions 
+
+	c.	
+		CPU time = 1.2 * CPU clock cycles / new clock rate
+		new clock rate = 1.2 * CPU clock cycles / 0.7 * CPU time
+		new clock rate = 1.71 * old clock rate
+		
+		P1 new clock rate = 5.13 Ghz
+		P2 new clock rate = 4.27 Ghz
+		P3 new clock rate = 6.84 Ghz
+		
+1.6
+	a.	
+		Global CPI for P1 = .1*1 + .2*2 + .5*3 + .2*3 = 2.6
+		Global CPI for P2 = .1*2 + .2*2 + .5*2 + .2*2 = 2.0
+
+	b.
+		Clock cycles for P1 = 1*10^6 * 2.6 = 2.6*10^6 cycles
+		Clock cycles for P2 = 1*10^6 * 2.0 = 2.0*10^6 cycles
+
+		Time for P1 = 2.6*10^6 / 2.5*10^9 = 1.04*10^-3 secs
+		Time for P2 = 2.0*10^6 / 3.0*10^9 = 6.67*10^-4 secs
+
+		P2 is faster
+
+1.7
+	a.
+		A cycles = 1.1 / 1*10^-9 = 1.1*10^9 cycles
+		B cycles = 1.5 / 1*10^-9 = 1.5*10^9 cycles
+
+		A CPI = 1.1*10^9 / 1.0*10^9 = 1.1 
+		B CPI = 1.5*10^9 / 1.2*10^9 = 1.25
+
+	b.
+		cycles A / clock rate A = cycles B / clock rate B
+		clock rate B / clock rate A = 1.5*10^9 / 1.1*10^9 = 1.36
+		B's clock is 1.36 times faster than A's
+	
+	c.
+		new compiler cycles = 1.1*6.0*10^8 = 6.6*10^8 cycles
+
+		CPU time A / CPU time new = cycles A / cycles new = 1.1*10^9 / 6.6*10^8 = 1.67
+		CPU time B / CPU time new = cycles B / cycles new = 1.5*10^9 / 6.6*10^8 = 2.27
+		
+1.13
+	1.
+		new FP time = 70*0.8 = 56s
+		new total time = 236s
+		total time reduced by 14/250 = 5.6%
+
+	2.
+		INT time = 55s
+		new total time = 0.8*250 = 200
+		new INT time = 200*(55/250) = 44s
+		INT time reduced by 11/55 = 20%
+
+	3.
+		200 = 40/x + 210
+		not possible
